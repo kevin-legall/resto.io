@@ -1,0 +1,137 @@
+.booking-section {
+    height: auto;
+    width: 80%;
+     margin: 100px auto;
+
+    @media screen and (max-width:1180px) {
+        margin: 100px auto;
+    }
+
+    @media screen and (max-width:800px) {
+        height: auto;
+    }
+
+    .booking-container {
+        height: auto;
+        display: grid;
+        grid-template-columns: 30% 70%;
+
+        @media screen and (max-width:800px) {
+            display: block;
+            height: 100%;
+        }
+
+        .booking-left {
+            width: 100%;
+            height: auto;
+            background: #000;
+
+            .booking-left-container {
+                @include centerAll;
+                width: 90%;
+                height: 90%;
+                margin: 25px auto;
+                border: 1px dashed $grey;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+                @media screen and (max-width:800px) {
+                    margin: 0 auto;
+                    padding: 25px auto;
+                    height: auto;
+                }
+
+                h2.poppins-title {
+                    color: $white;
+                }
+
+                h3 {
+                    color: $gold;
+                    font-size: 1.3rem;
+                }
+
+                p {
+                    color: $white;
+                }
+            }
+        }
+
+        .booking-right {
+            width: 100%;
+            background: $white;
+            @include centerAll;
+
+            .booking-right-container {
+                @include centerAll;
+                width: 90%;
+                height: 90%;
+                margin: 0 auto;
+
+                h2, img {
+                    padding: 20px;
+                }
+
+                form {
+                    width: 90%;
+                    margin: 0 auto;
+
+                    .form-top, .form-bottom {
+                        padding-top: 20px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+
+                        @media screen and (max-width:850px) {
+                            flex-direction: column;
+                            align-items: center;
+                            width: 100%;
+                        }
+
+                        input, select {
+                            color: $grey;
+                            font-size: 1rem;
+                            padding-right: 20px;
+                            width: 25%;
+                            height: 50px;
+                            border: none;
+                            border-bottom: 1px solid $grey;
+                            background: $white;
+
+                            @media screen and (max-width:850px) {
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    button {
+                        transition: all 0.4s ease-in-out;
+                        cursor: pointer;
+                        width: 40%;
+                        padding: 20px;
+                        border: none;
+                        text-transform: uppercase;
+                        letter-spacing: 3px;
+                        font-size: 1rem;
+                        margin: 60px auto;
+                        border-radius: 50px;
+                        background: $black;
+                        color: $white;
+
+                        @media screen and (max-width:850px) {
+                            width: 100%;
+                        }
+
+                        &:hover {
+                            background: $white;
+                            color: $gold;
+                            border: 1px solid $gold;
+                        }
+                    }
+                }
+            }
+
+        }
+
+    }
+}

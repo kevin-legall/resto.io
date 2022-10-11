@@ -1,0 +1,47 @@
+nav {
+    position: absolute;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .nav-anchor {
+
+        @media screen and (max-width:780px) {
+            display: none;
+        }
+    }
+
+    .link-nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        @include centerAll;
+
+        h1 {
+            color: $white;
+            font-family: allura;
+        }
+
+            a {
+                color: $white;
+                text-decoration: none;
+                text-transform: uppercase;
+
+                &:hover {
+                    text-decoration:underline;
+                }
+
+            }
+    }
+
+    .social-nav {
+        width: 10%;
+        display: flex;
+        justify-content: space-around;
+        transition: scale 0.5s ease-in-out;
+
+        li:hover {
+            transform: scale(1.3);
+        }
+    }
+}
